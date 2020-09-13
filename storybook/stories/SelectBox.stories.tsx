@@ -13,7 +13,7 @@ export const Default = () => {
     <SelectBox
       items={[
         {
-          title: '나를 안전하게 보호하기',
+          title: 'Keep me safe',
           description: '모든 사용자의 개인 메시지를 스캔하기.',
           value: 'sel1',
           color: 'green',

@@ -49,13 +49,17 @@
   --spoiler-background: #b9bbbe;
   --spoiler-background-show: #e3e5e8;
   --spoiler-background--hover: #b9bbbecc;
+
+  --selbox-check-area--border: #b9bbbe;
 }
 
 :global {
   .dark-theme {
-    --input-border: #040405;
+    --input-border: #202225;
     --input-bg: #303339;
     --input-color: #fff;
+
+    --selbox-check-area--border: #72767d;
 
     --embed-background: #f2f3f5;
 

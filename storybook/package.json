@@ -17,7 +17,6 @@
     "react-is": "^16.13.1"
   },
   "dependencies": {
-    "bable-loader": "^0.0.1-security",
     "discord-components-react": "link:..",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-scripts": "^3.4.3"
