@@ -1,14 +1,15 @@
 import React from 'react'
-import SelectContainer from 'react-select'
+import ReactSelect from 'react-select'
 
-const Select: React.FC<React.BaseHTMLAttributes<HTMLDivElement>> = ({
+const Select: React.FC<React.SelectHTMLAttributes<HTMLSelectElement>> = ({
   ...props
 }) => {
   return (
-    <SelectContainer
+    // @ts-ignore
+    <ReactSelect
       {...props}
       styles={{
-        control: (styles) => ({
+        control: (styles: any) => ({
           ...styles,
           boxShadow: 'none',
           backgroundColor: 'rgba(0, 0, 0, 0.1)',
@@ -22,11 +23,11 @@ const Select: React.FC<React.BaseHTMLAttributes<HTMLDivElement>> = ({
             borderColor: 'rgba(0, 0, 0, 0.6)'
           }
         }),
-        singleValue: (styles) => ({
+        singleValue: (styles: any) => ({
           ...styles,
           color: 'rgb(246, 246, 247)'
         }),
-        dropdownIndicator: (styles, { isFocused }) => ({
+        dropdownIndicator: (styles: any, { isFocused }: any) => ({
           ...styles,
           cursor: 'pointer',
           padding: '8px 8px 8px 0',
@@ -38,20 +39,20 @@ const Select: React.FC<React.BaseHTMLAttributes<HTMLDivElement>> = ({
             opacity: 1
           }
         }),
-        indicatorSeparator: (styles) => ({
+        indicatorSeparator: (styles: any) => ({
           ...styles,
           display: 'none'
         }),
-        menu: (styles) => ({
+        menu: (styles: any) => ({
           ...styles,
           margin: 0,
           borderRadius: 0
         }),
-        menuList: (styles) => ({
+        menuList: (styles: any) => ({
           ...styles,
           backgroundColor: 'var(--scrollbar-auto-track)'
         }),
-        option: (styles, { isSelected, isFocused }) => ({
+        option: (styles: any, { isSelected, isFocused }: any) => ({
           ...styles,
           cursor: 'pointer',
           backgroundColor: isSelected

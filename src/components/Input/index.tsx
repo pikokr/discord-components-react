@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Color } from '../..'
 
 const StyledInput = styled.input`
   font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -16,13 +17,15 @@ const StyledInput = styled.input`
   outline: none;
 
   &:focus {
-    border-color: var(--purple);
+    border-color: var(--${(props: any) => props.color || 'purple'});
   }
 `
 
-const Input: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = ({
-  ...props
-}) => {
+type InputProps = {
+  color?: Color
+} & React.InputHTMLAttributes<HTMLInputElement>
+
+const Input: React.FC<InputProps> = ({ ...props }) => {
   return <StyledInput {...props} />
 }
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import { Color } from '../../types/Color'
 
 const StyledButton: any = styled.button`
   cursor: pointer;
@@ -44,7 +45,7 @@ const StyledButton: any = styled.button`
 `
 
 type ButtonProps = {
-  color?: 'purple' | 'green' | 'red' | 'yellow' | 'red'
+  color?: Color
   variant?: 'default' | 'outlined'
 }
 

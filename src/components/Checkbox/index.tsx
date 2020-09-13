@@ -114,6 +114,7 @@ export default Checkbox
 
 import React from 'react'
 import styled from 'styled-components'
+import { Color } from '../..'
 
 const Switch: any = styled.span`
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
@@ -210,7 +211,7 @@ const SwitchContainer = styled.label`
 `
 
 type CheckboxProps = {
-  color?: 'purple' | 'red' | 'yellow' | 'green'
+  color?: Color
 }
 
 const Checkbox: React.FC<
