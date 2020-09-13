@@ -9,8 +9,8 @@ export default {
 
 export const Default = () => (
   <Embed
-    title='존경'
-    description='존경'
+    title='제목'
+    description='내용'
     color='#00ff00'
     fields={[
       {
@@ -31,19 +31,20 @@ export const Default = () => (
       {
         inline: true,
         name: '와샌즈',
-        value: '와샌즈'
+        value: '존경'
       },
       {
         inline: true,
         name: '와샌즈',
-        value: '와샌즈'
+        value: '와샌즈asdfasdfasdfasdfsadfasdf'
       }
     ]}
     footer={{
-      text: '존경'
+      text: '푸터'
     }}
     author={{
-      text: '존경'
+      text: '샌즈',
+      url: 'https://discord.com'
     }}
   />
 )
@@ -51,8 +52,8 @@ export const Default = () => (
 export const Dark = () => (
   <div className='dark-theme'>
     <Embed
-      title='존경'
-      description='존경'
+      title='제목'
+      description='내용'
       color='#00ff00'
       fields={[
         {
@@ -73,23 +74,25 @@ export const Dark = () => (
         {
           inline: true,
           name: '와샌즈',
-          value: '와샌즈'
+          value: '존경'
         },
         {
           inline: true,
           name: '와샌즈',
-          value: '와샌즈'
+          value: '와샌즈asdfasdfasdfasdfsadfasdf'
         }
       ]}
       footer={{
-        text: '존경'
+        text: '푸터'
       }}
       author={{
-        text: '존경'
+        text: '샌즈',
+        url: 'https://discord.com'
       }}
     />
   </div>
 )
+
 Dark.parameters = {
   backgrounds: { default: 'dark' }
 }

@@ -19,12 +19,14 @@ const EmbedContainer = styled.div`
   grid-row-gap: 0.25rem;
   text-indent: 0;
   min-height: 0;
+  max-width: 520px;
   min-width: 0;
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
 `
 
 const EmbedWrapper = styled.div`
+  overflow-wrap: anywhere;
   justify-content: start;
   align-items: start;
   border-left: 4px solid
@@ -35,6 +37,7 @@ const EmbedWrapper = styled.div`
   max-width: max-content;
   box-sizing: border-box;
   border-radius: 4px;
+  white-space: pre-line;
   font-size: 1rem;
   line-height: 1.375rem;
   color: var(--embed-color);
@@ -205,6 +208,31 @@ type EmbedProps = {
 const Embed: React.FC<
   React.BaseHTMLAttributes<HTMLDivElement> & EmbedProps
 > = ({ color, author, title, description, fields, footer, ...props }) => {
+  const chunkedFields: Array<Array<EmbedFieldType>> = []
+
+  let chunk: Array<EmbedFieldType> = []
+
+  if (fields) {
+    fields.forEach((field) => {
+      if (!field.inline) {
+        chunkedFields.push(chunk)
+        chunk = []
+        chunkedFields.push([field])
+        return
+      }
+
+      if (chunk.length >= 3) {
+        chunkedFields.push(chunk)
+        chunk = []
+      }
+      chunk.push(field)
+    })
+  }
+
+  if (chunk.length !== 0) chunkedFields.push(chunk)
+
+  console.log(chunkedFields)
+
   return (
     <EmbedFlex {...props}>
       <EmbedContainer>
@@ -228,17 +256,30 @@ const Embed: React.FC<
             {description && <EmbedDescription>{description}</EmbedDescription>}
             {fields && (
               <EmbedFields>
-                {fields.map((field, i) => (
-                  <EmbedField
-                    key={i}
-                    style={{
-                      gridColumn: '1/13'
-                    }}
-                  >
-                    <EmbedFieldName>{field.name}</EmbedFieldName>
-                    <EmbedFieldValue>{field.value}</EmbedFieldValue>
-                  </EmbedField>
-                ))}
+                {chunkedFields.map((chunk, idx) =>
+                  chunk.map((field, i) => (
+                    <EmbedField
+                      key={`${idx}-${i}`}
+                      style={{
+                        gridColumn:
+                          chunk.length === 1
+                            ? '1/13'
+                            : chunk.length === 2
+                            ? i === 0
+                              ? '1/7'
+                              : '8/13'
+                            : i === 0
+                            ? '1/4'
+                            : i === 1
+                            ? '5/8'
+                            : '9/13'
+                      }}
+                    >
+                      <EmbedFieldName>{field.name}</EmbedFieldName>
+                      <EmbedFieldValue>{field.value}</EmbedFieldValue>
+                    </EmbedField>
+                  ))
+                )}
               </EmbedFields>
             )}
             {footer && (
