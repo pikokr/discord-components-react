@@ -1,6 +1,6 @@
 {
-  "name": "@student-developers-korea/discord-components-react",
-  "version": "1.0.0",
+  "name": "discord-components-react",
+  "version": "1.0.01",
   "description": "Made with create-react-library",
   "author": "parangee",
   "license": "MIT",
@@ -14,9 +14,9 @@
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
-    "prepare": "run-s build",
+    "prepare": "microbundle-crl --no-compress --format modern,cjs",
     "test": "run-s test:unit test:lint test:build",
-    "test:build": "run-s build",
+    "test:build": "microbundle-crl --no-compress --format modern,cjs",
     "test:lint": "eslint .",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
@@ -56,20 +56,16 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "@types/react-select": "^3.0.19"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@storybook/addon-actions": "^6.0.21",
-    "@types/react-select": "^3.0.19",
     "node-sass": "^4.14.1",
     "react-is": "^16.13.1",
     "react-select": "^3.1.0",
     "styled-components": "^5.2.0"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }
