@@ -9,41 +9,41 @@ export default {
 
 export const Default = () => (
   <Embed
-    title='제목'
-    description='내용'
-    color='#00ff00'
+    title='Title'
+    description='Description'
+    color='#7289DA'
     fields={[
       {
         inline: true,
-        name: '와샌즈',
-        value: '와샌즈'
+        name: 'Name',
+        value: 'Value'
       },
       {
         inline: true,
-        name: '와샌즈',
-        value: '와샌즈'
+        name: 'NameNameNameNameName',
+        value: 'Value'
       },
       {
         inline: true,
-        name: '와샌즈',
-        value: '와샌즈'
+        name: 'Name',
+        value: 'ValueValueValueValueValue'
       },
       {
         inline: true,
-        name: '와샌즈',
-        value: '존경'
+        name: 'Name',
+        value: 'ValueValueValueValueValue'
       },
       {
         inline: true,
-        name: '와샌즈',
-        value: '와샌즈asdfasdfasdfasdfsadfasdf'
+        name: 'Name',
+        value: 'ValueValueValueValueValue'
       }
     ]}
     footer={{
-      text: '푸터'
+      text: 'Footer'
     }}
     author={{
-      text: '샌즈',
+      text: 'Author',
       url: 'https://discord.com'
     }}
   />
@@ -52,41 +52,41 @@ export const Default = () => (
 export const Dark = () => (
   <div className='dark-theme'>
     <Embed
-      title='제목'
-      description='내용'
-      color='#00ff00'
+      title='Title'
+      description='Description'
+      color='#7289DA'
       fields={[
         {
           inline: true,
-          name: '와샌즈',
-          value: '와샌즈'
+          name: 'Name',
+          value: 'Value'
         },
         {
           inline: true,
-          name: '와샌즈',
-          value: '와샌즈'
+          name: 'Name',
+          value: 'Value'
         },
         {
           inline: true,
-          name: '와샌즈',
-          value: '와샌즈'
+          name: 'Name',
+          value: 'Value'
         },
         {
           inline: true,
-          name: '와샌즈',
-          value: '존경'
+          name: 'Name',
+          value: 'ValueValueValueValueValue'
         },
         {
           inline: true,
-          name: '와샌즈',
-          value: '와샌즈asdfasdfasdfasdfsadfasdf'
+          name: 'Name',
+          value: 'ValueValueValueValueValue'
         }
       ]}
       footer={{
-        text: '푸터'
+        text: 'Footer'
       }}
       author={{
-        text: '샌즈',
+        text: 'Author',
         url: 'https://discord.com'
       }}
     />

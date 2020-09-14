@@ -14,25 +14,27 @@ export const Default = () => {
       items={[
         {
           title: 'Keep me safe',
-          description: '모든 사용자의 개인 메시지를 스캔하기.',
+          description: 'Scan direct messages from everyone.',
           value: 'sel1',
           color: 'green',
           default: true
         },
         {
-          title: '착한 친구만 있어요',
-          description: '친구가 아닌 모든 사람의 메시지를 스캔하기.',
+          title: 'My friends are nice',
+          description:
+            'Scan direct messages from everyone unless they are a friend.',
           value: 'sel2',
           color: 'yellow'
         },
         {
-          title: '스캔하지 않기',
-          description: '개인 메시지에서는 유해 콘텐츠를 스캔하지 않아요.',
+          title: 'Do not scan',
+          description:
+            'Direct messages will not be scanned for explicit content.',
           value: 'sel3',
           color: 'red'
         },
         {
-          title: '대충 보라색',
+          title: 'Purple',
           value: 'purple',
           color: 'purple'
         }
@@ -50,26 +52,28 @@ export const Dark = () => {
       <SelectBox
         items={[
           {
-            title: '나를 안전하게 보호하기',
-            description: '모든 사용자의 개인 메시지를 스캔하기.',
+            title: 'Keep me safe',
+            description: 'Scan direct messages from everyone.',
             value: 'sel1',
             color: 'green',
             default: true
           },
           {
-            title: '착한 친구만 있어요',
-            description: '친구가 아닌 모든 사람의 메시지를 스캔하기.',
+            title: 'My friends are nice',
+            description:
+              'Scan direct messages from everyone unless they are a friend.',
             value: 'sel2',
             color: 'yellow'
           },
           {
-            title: '스캔하지 않기',
-            description: '개인 메시지에서는 유해 콘텐츠를 스캔하지 않아요.',
+            title: 'Do not scan',
+            description:
+              'Direct messages will not be scanned for explicit content.',
             value: 'sel3',
             color: 'red'
           },
           {
-            title: '대충 보라색',
+            title: 'Purple',
             value: 'purple',
             color: 'purple'
           }

@@ -267,12 +267,12 @@ const Embed: React.FC<
                             : chunk.length === 2
                             ? i === 0
                               ? '1/7'
-                              : '8/13'
+                              : '8/12'
                             : i === 0
                             ? '1/4'
                             : i === 1
                             ? '5/8'
-                            : '9/13'
+                            : '9/12'
                       }}
                     >
                       <EmbedFieldName>{field.name}</EmbedFieldName>

@@ -1,11 +1,8 @@
 import React from 'react'
-import ReactSelect from 'react-select'
+import ReactSelect, { OptionTypeBase, Props as SelectProps } from 'react-select'
 
-const Select: React.FC<React.SelectHTMLAttributes<HTMLSelectElement>> = ({
-  ...props
-}) => {
+const Select: React.FC<SelectProps<OptionTypeBase>> = ({ ...props }) => {
   return (
-    // @ts-ignore
     <ReactSelect
       {...props}
       styles={{

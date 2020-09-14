@@ -1,10 +1,10 @@
 {
-  "name": "discord-components-react",
+  "name": "@student-developers-korea/discord-components-react",
   "version": "1.0.0",
   "description": "Made with create-react-library",
   "author": "parangee",
   "license": "MIT",
-  "repository": "parangee/discord-components-react",
+  "repository": "https://github.com/student-developers-korea/discord-components-react",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
@@ -68,5 +68,8 @@
     "react-is": "^16.13.1",
     "react-select": "^3.1.0",
     "styled-components": "^5.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
