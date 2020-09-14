@@ -26,7 +26,14 @@
   "peerDependencies": {
     "react": "^16.0.0"
   },
-  "devDependencies": {
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "node-sass": "^4.14.1",
+    "react-is": "^16.13.1",
+    "react-select": "^3.1.0",
+    "styled-components": "^5.2.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -58,14 +65,5 @@
     "react-scripts": "^3.4.1",
     "typescript": "^3.7.5",
     "@types/react-select": "^3.0.19"
-  },
-  "files": [
-    "dist"
-  ],
-  "dependencies": {
-    "node-sass": "^4.14.1",
-    "react-is": "^16.13.1",
-    "react-select": "^3.1.0",
-    "styled-components": "^5.2.0"
   }
 }
