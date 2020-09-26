@@ -53,6 +53,13 @@
   --spoiler-background--hover: #b9bbbecc;
 
   --selbox-check-area--border: #b9bbbe;
+
+  --select-single-value-color: rgb(32, 34, 37);
+  --select-control-background: rgba(79, 84, 92, 0.02);
+  --select-control-border-color: rgba(79, 84, 92, 0.3);
+  --select-control-border-color--hover: rgb(185, 187, 190);
+  --select-dropdown-indicator-color: rgb(114, 114, 114);
+  --select-menulist-background: #f6f6f7;
 }
 
 :global {
@@ -80,6 +87,14 @@
     --spoiler-background: #202225;
     --spoiler-background--hover: #202225cc;
     --spoiler-background-show: #ffffff1a;
+
+    --select-single-value-color: rgb(246, 246, 247);
+    --select-control-background: rgba(0, 0, 0, 0.1);
+    --select-control-border-color: rgba(32, 34, 37, 0.5);
+    --select-control-border-color--hover: rgba(0, 0, 0, 0.6);
+    --select-control-border-color--hover: rgb(185, 187, 190);
+    --select-dropdown-indicator-color: rgb(246, 246, 247);
+    --select-menulist-background: #2a2c30;
   }
 }
 

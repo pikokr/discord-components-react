@@ -9,30 +9,30 @@ const Select: React.FC<SelectProps<OptionTypeBase>> = ({ ...props }) => {
         control: (styles: any) => ({
           ...styles,
           boxShadow: 'none',
-          backgroundColor: 'rgba(0, 0, 0, 0.1)',
-          borderColor: 'rgba(32, 34, 37, 0.5)',
+          backgroundColor: 'var(--select-control-background)',
+          borderColor: 'var(--select-control-border-color)',
           borderRadius: '3px',
           borderStyle: 'solid',
           borderWidth: '1px',
           minHeight: '40px',
           transition: 'border 0.15s ease 0s',
           '&:hover': {
-            borderColor: 'rgba(0, 0, 0, 0.6)'
+            borderColor: 'var(--select-control-border-color--hover)'
           }
         }),
         singleValue: (styles: any) => ({
           ...styles,
-          color: 'rgb(246, 246, 247)'
+          color: 'var(--select-single-value-color)'
         }),
         dropdownIndicator: (styles: any, { isFocused }: any) => ({
           ...styles,
           cursor: 'pointer',
           padding: '8px 8px 8px 0',
           transition: 'color 150ms ease 0s',
-          color: 'rgb(246, 246, 247)',
+          color: 'var(--select-dropdown-indicator-color)',
           opacity: isFocused ? 1 : 0.3,
           '&:hover': {
-            color: 'rgb(246, 246, 247)',
+            color: 'var(--select-dropdown-indicator-color)',
             opacity: 1
           }
         }),
@@ -47,7 +47,28 @@ const Select: React.FC<SelectProps<OptionTypeBase>> = ({ ...props }) => {
         }),
         menuList: (styles: any) => ({
           ...styles,
-          backgroundColor: 'var(--scrollbar-auto-track)'
+          backgroundColor: 'var(--select-menulist-background)',
+          '::-webkit-scrollbar': {
+            width: '16px',
+            height: '16px'
+          },
+          '::-webkit-scrollbar-corner': {
+            backgroundColor: 'transparent'
+          },
+          '::-webkit-scrollbar-thumb': {
+            border: '4px solid transparent',
+            backgroundClip: 'padding-box',
+            borderRadius: '8px',
+            backgroundColor: 'var(--scrollbar-auto-thumb)',
+            minHeight: '40px'
+          },
+          '::-webkit-scrollbar-track': {
+            border: '4px solid transparent',
+            backgroundClip: 'padding-box',
+            borderRadius: '8px',
+            marginBottom: '8px',
+            backgroundColor: 'var(--scrollbar-auto-track)'
+          }
         }),
         option: (styles: any, { isSelected, isFocused }: any) => ({
           ...styles,

@@ -8,7 +8,6 @@ export default {
 export const Spoiler = () => (
   <>
     <Message.Spoiler>Spoiler</Message.Spoiler>
-    <Message.Spoiler>Test</Message.Spoiler>
   </>
 )
 
