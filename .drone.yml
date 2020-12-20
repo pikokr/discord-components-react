@@ -1,0 +1,41 @@
+kind: pipeline
+type: docker
+name: publish
+
+
+workspace:
+  path: /portfolio
+
+when:
+    branch:
+    - master
+
+steps:
+- name: build
+  image: node:15
+  commands:
+  - yarn
+  - cd storybook
+  - yarn
+  - yarn build-storybook
+  - touch build/.nojekyll
+  volumes:
+  - name: buildFiles
+    path: /portfolio/storybook/storybook-static
+- name: publish  
+  image: plugins/gh-pages
+  volumes:
+  - name: buildFiles
+    path: /portfolio/storybook/storybook-static
+  settings:
+    username:
+      from_secret: github_username
+    password:
+      from_secret: github_password
+    pages_directory: storybook-static/
+
+
+
+volumes:
+- name: buildFiles
+  temp: {}
