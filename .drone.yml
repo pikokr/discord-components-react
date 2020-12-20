@@ -19,14 +19,8 @@ steps:
   - yarn
   - yarn build-storybook
   - touch build/.nojekyll
-  volumes:
-  - name: buildFiles
-    path: /portfolio/storybook/storybook-static
 - name: publish  
   image: plugins/gh-pages
-  volumes:
-  - name: buildFiles
-    path: /portfolio/storybook/storybook-static
   settings:
     username:
       from_secret: github_username
@@ -34,8 +28,3 @@ steps:
       from_secret: github_password
     pages_directory: storybook-static/
 
-
-
-volumes:
-- name: buildFiles
-  temp: {}
