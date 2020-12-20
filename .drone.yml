@@ -18,7 +18,7 @@ steps:
   - cd storybook
   - yarn
   - yarn build-storybook
-  - touch build/.nojekyll
+  - touch storybook-static/.nojekyll
 - name: publish  
   image: plugins/gh-pages
   settings:
